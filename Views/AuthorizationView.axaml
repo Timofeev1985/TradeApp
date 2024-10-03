@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TradeApp.Views.AuthorizationView">
+  <!-- <StackPanel Orientation="Vertical" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"> 
+        <StackPanel Orientation="Horizontal"> 
+            <TextBlock Text="Login" /> 
+            <TextBox /> 
+        </StackPanel> 
+        <StackPanel Orientation="Horizontal"> 
+            <TextBlock Text="Password" /> 
+            <TextBox /> 
+        </StackPanel> 
+        <StackPanel Orientation="Horizontal"> 
+            <Button Content="Авторизироваться" /> 
+            <Button Content="Войти гостем" /> 
+        </StackPanel> 
+    </StackPanel> -->
+    <Grid>
+      <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Введите логин: " HorizontalAlignment="Center"></Label>
+        <TextBox x:Name="LoginTB" HorizontalAlignment="Center" Height="24" />
+      <Label Content="Введите пароль " HorizontalAlignment="Center"></Label>
+        <TextBox x:Name="PasswordTB" HorizontalAlignment="Center" Height="24" ></TextBox>
+        <StackPanel Orientation="Vertical"> 
+          <Button x:Name="Registr" Content="Регистрация" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+          <Button x:Name="Enter" Content="Войти" Click="AuthButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+</UserControl>

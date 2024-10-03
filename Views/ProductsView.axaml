@@ -1,0 +1,52 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TradeApp.Views.ProductsView"
+             xmlns:views="clr-namespace:TradeApp.Views;assembly=TradeApp" 
+             x:DataType="views:ProductsView"
+             >
+             <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                 <RowDefinition/>
+                </Grid.RowDefinitions>
+             <StackPanel Orientation="Horizontal">
+                   <StackPanel Orientation="Vertical">
+                  <TextBlock  Text="ФИО: "/>
+                  </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                  <TextBlock Margin="0 0"  Text="{Binding User.UserSurname}"/>
+                  <TextBlock Margin="10 0" Text="{Binding User.UserName}"/>
+                  <TextBlock Margin="10 0" Text="{Binding User.UserPatronymic}"/>
+                </StackPanel>
+              </StackPanel>
+    <ListBox Grid.Row="1" x:Name="ProductsListBox" ItemsSource="{Binding Products}" Background="#fefae0">
+                  <ListBox.ItemTemplate>
+                    <DataTemplate>
+                      <StackPanel Orientation="Vertical">
+                      
+                        <StackPanel Orientation="Horizontal">
+                           <Image Name="PhotoImage" Source="{Binding Image}" Width="100" Height="100"/>
+                            <StackPanel Orientation="Vertical">
+                                  <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10 0" Text="Наименование товара: "/>
+                                    <TextBlock Text="{Binding ProductName}"/>  
+                                  </StackPanel>
+                                  <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10 0" Text="Описание товара: "/>
+                                    <TextBlock Text="{Binding ProductDescription}"/>
+                                  </StackPanel>
+                                  <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10 0" Text="Производитель: "/>
+                                    <TextBlock Text="{Binding ProductProvider}"/>  
+                                  </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                      </StackPanel>
+                    </DataTemplate>
+                    </ListBox.ItemTemplate>
+      </ListBox>
+      </Grid>
+</UserControl>
