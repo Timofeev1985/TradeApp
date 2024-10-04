@@ -23,4 +23,8 @@ public partial class ProductsView : UserControl
     {
         AvaloniaXamlLoader.Load(this);
     }
+     private void CloseButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        App.MainWindow.MainContentControl.Content = new AuthorizationView();
+    }
 }

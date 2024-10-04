@@ -32,6 +32,11 @@
         <StackPanel Orientation="Vertical">
           <Button x:Name="Enter" Content="Войти" Click="AuthButton_Click" HorizontalAlignment="Center"/>
         </StackPanel>
+        <StackPanel x:Name="CaptchaPanel" IsVisible="False">
+          <TextBox x:Name="CaptchaTextBox"/>
+          <Image x:Name="CaptchaImage" Width="300" Height="100"/>
+        </StackPanel>
+         
       </StackPanel>
     </Grid>
 </UserControl>

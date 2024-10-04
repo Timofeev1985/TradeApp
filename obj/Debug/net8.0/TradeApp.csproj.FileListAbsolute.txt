@@ -146,3 +146,4 @@ C:\Users\Student\Desktop\project\TradeApp\bin\Debug\net8.0\ru\Microsoft.CodeAnal
 C:\Users\Student\Desktop\project\TradeApp\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Student\Desktop\project\TradeApp\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Student\Desktop\project\TradeApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+c:\Users\Student\Desktop\project\TradeApp\obj\Debug\net8.0\TradeApp.sourcelink.json

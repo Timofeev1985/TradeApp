@@ -16,32 +16,37 @@
                    <StackPanel Orientation="Vertical">
                   <TextBlock  Text="ФИО: "/>
                   </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Width="700">
                   <TextBlock Margin="0 0"  Text="{Binding User.UserSurname}"/>
                   <TextBlock Margin="10 0" Text="{Binding User.UserName}"/>
                   <TextBlock Margin="10 0" Text="{Binding User.UserPatronymic}"/>
+                  <Button x:Name="CloseButton" Click="CloseButton_Click" Content="Отмена" HorizontalAlignment="Right"/> 
                 </StackPanel>
               </StackPanel>
     <ListBox Grid.Row="1" x:Name="ProductsListBox" ItemsSource="{Binding Products}" Background="#fefae0">
                   <ListBox.ItemTemplate>
                     <DataTemplate>
-                      <StackPanel Orientation="Vertical">
+                      <StackPanel x:Name="ProductPanel" Orientation="Vertical">
                       
                         <StackPanel Orientation="Horizontal">
                            <Image Name="PhotoImage" Source="{Binding Image}" Width="100" Height="100"/>
-                            <StackPanel Orientation="Vertical">
-                                  <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" Width="750" >
+                                  <StackPanel Orientation="Horizontal" Width="750">
                                     <TextBlock Margin="10 0" Text="Наименование товара: "/>
                                     <TextBlock Text="{Binding ProductName}"/>  
                                   </StackPanel>
-                                  <StackPanel Orientation="Horizontal">
+                                  <StackPanel Orientation="Horizontal" Width="750">
                                     <TextBlock Margin="10 0" Text="Описание товара: "/>
                                     <TextBlock Text="{Binding ProductDescription}"/>
                                   </StackPanel>
                                   <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10 0" Text="Производитель: "/>
-                                    <TextBlock Text="{Binding ProductProvider}"/>  
+                                    <TextBlock x:Name="AmountTexBox" Text="{Binding ProductProvider}"/>  
                                   </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="10 0" Text="Размер скидки: "/>
+                                <TextBlock Text="{Binding ProductMaxDiscountAmount}"/>  
                             </StackPanel>
                         </StackPanel>
                       </StackPanel>
